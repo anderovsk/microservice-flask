@@ -1,0 +1,18 @@
+version: "3"
+volumes:
+  postgres-data:
+services:
+  postgres:
+    image: postgres:9.6
+    container_name: postgres
+    environment:
+        - POSTGRES_PASSWORD=admin
+        - POSTGRES_DB=microservices
+    network_mode: host
+    ports:
+      - 5432:5432
+#export DB_USER=postgres
+#export DB_PASSWORD=admin
+#export DB_HOST=localhost
+#export DB_PORT=5432
+#export DB_NAME=microservices      
